@@ -1,0 +1,51 @@
+{{> header}}
+<h2>Rechercher des activités</h2>
+<p>La recherche est limitée à 200 activités. Si vous souhaitez exporter plus de 200 activités, il faut le faire en plusieurs fois en jouant sur la période.</p>
+<form id="searchActivities" action="" method="post">
+  <label for="after">
+    Depuis
+    <input type="date" name="after" id="after" value="{{after}}" required />
+  </label>
+  <label for="before">
+    Au
+    <input type="date" name="before" id="before" value="{{before}}" required />
+  </label>
+  <input type="hidden" name="export" id="export" value="" />
+  <input type="button" value="Rechercher" id="searchBtn" />
+</form>
+
+<h2>Liste des activités</h2>
+<a href="#" id="exportBtn">Exporter la liste</a>
+<table id="activitiesList">
+<tr>
+  <th>Type</th>
+  <th>Début</th>
+  <th>Durée en déplacement</th>
+  <th>Temps écoulé</th>
+  <th>Nom</th>
+  <th>Distance</th>
+  <th>Dénivelé</th>
+  <th>Déplacement-transport</th>
+  <th>Vitesse moyenne</th>
+  <th>Vitesse max.</th>
+</tr>
+{{#activities}}
+  <tr>
+    <td class="type">{{type}}</td>
+    <td class="date">{{start_date}}</td>
+    <td class="time">{{moving_time}}</td>
+    <td class="time">{{elapsed_time}}</td>
+    <td class="name">{{name}}</td>
+    <td class="distance">{{distance}}</td>
+    <td class="meters">{{total_elevation_gain}}m</td>
+    <td class="commute">{{commute}}</td>
+    <td class="speed">{{avg_speed}}</td>
+    <td class="speed">{{max_speed}}</td>
+    <td class=""><a href="https://www.strava.com/activities/{{activity_id}}" target="_new" class="strava">View on Strava</a>
+  </tr>
+{{/activities}}
+{{^activities}}
+<tr><td colspan="10">Merci d'utiliser le formulaire ci-dessus pour lister vos activités</td></tr>
+{{/activities}}
+</table>
+{{> footer}}

@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Warnes');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic');
+@import url('http://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+@font-face {
+    font-family: 'lunaregular';
+    src: url('../fonts/luna-webfont.woff2') format('woff2'),
+         url('../fonts/luna-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>StratS - lister & exporter vos parcours Strava</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  <header>
+    <img id="logo" src="assets/images/bike.png" alt="Strats" />
+    <h1>Strats</h1>
+    <h2>Lister & exporter vos parcours Strava</h2>
+    <nav>
+      Bonjour
+      {{#user}}
+         {{user}},
+        <a href="./logout">fermer la session</a>
+      {{/user}}
+      {{#link}}
+        , connectez-vous via le bouton <a href="{{link}}"><img src="assets/images/btn_strava_connectwith_light.png" alt="Connect With Strava" /></a>
+      {{/link}}
+    </nav>
+  </header>
+
+  <div id="content">

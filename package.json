@@ -1,0 +1,23 @@
+{
+  "name": "strats",
+  "version": "1.0.0",
+  "description": "Visualize & export Strava activities",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "strats"
+  ],
+  "author": "foransic",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "mustache-express": "^1.2.8",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
