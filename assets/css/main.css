@@ -109,10 +109,10 @@ body {
 header {
   background: #77af9c;
   padding: 10px 0 0;
+  text-align: center;
 }
 
 header #logo {
-  float: left;
   height: 120px;
   margin: 10px 20px 0 30px;
 }
@@ -137,6 +137,7 @@ header h2 {
 }
 
 header nav {
+  text-align: left;
   color: #d7fff1;
   background: #285943;
   margin-top: 10px;
@@ -155,6 +156,10 @@ footer {
   padding: 10px 0 10px 20px;
   width: 100%;
   color: #285943;
+}
+
+footer img {
+  width: 20px;
 }
 
 a {
